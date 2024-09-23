@@ -1,0 +1,20 @@
+cubes:
+  - name: my_second_dbt_model
+    sql_table: dbt_alex.my_second_dbt_model
+
+    joins: []
+
+    dimensions:
+      - name: id
+        sql: id
+        type: number
+        primary_key: true
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

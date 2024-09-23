@@ -1,0 +1,32 @@
+cubes:
+  - name: raw_orders
+    sql_table: dbt_alex.raw_orders
+
+    joins: []
+
+    dimensions:
+      - name: id
+        sql: id
+        type: number
+        primary_key: true
+
+      - name: user_id
+        sql: user_id
+        type: number
+
+      - name: status
+        sql: status
+        type: string
+
+      - name: order_date
+        sql: order_date
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

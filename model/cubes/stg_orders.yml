@@ -1,0 +1,35 @@
+cubes:
+  - name: stg_orders
+    sql_table: dbt_alex.stg_orders
+
+    joins:
+      - name: customers
+        sql: "{CUBE}.customer_id = {customers}.customer_id"
+        relationship: many_to_one
+
+    dimensions:
+      - name: order_id
+        sql: order_id
+        type: number
+        primary_key: true
+
+      - name: customer_id
+        sql: customer_id
+        type: number
+
+      - name: status
+        sql: status
+        type: string
+
+      - name: order_date
+        sql: order_date
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

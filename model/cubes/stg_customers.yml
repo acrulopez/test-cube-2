@@ -1,0 +1,28 @@
+cubes:
+  - name: stg_customers
+    sql_table: dbt_alex.stg_customers
+
+    joins: []
+
+    dimensions:
+      - name: customer_id
+        sql: customer_id
+        type: number
+        primary_key: true
+
+      - name: first_name
+        sql: first_name
+        type: string
+
+      - name: last_name
+        sql: last_name
+        type: string
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

@@ -1,0 +1,35 @@
+cubes:
+  - name: stg_payments
+    sql_table: dbt_alex.stg_payments
+
+    joins:
+      - name: raw_orders
+        sql: "{CUBE}.order_id = {raw_orders}.id"
+        relationship: many_to_one
+
+    dimensions:
+      - name: payment_id
+        sql: payment_id
+        type: number
+        primary_key: true
+
+      - name: order_id
+        sql: order_id
+        type: number
+
+      - name: payment_method
+        sql: payment_method
+        type: string
+
+      - name: amount
+        sql: amount
+        type: string
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+
