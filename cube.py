@@ -15,6 +15,7 @@ def driver_factory(ctx: dict) -> None:
     'database': "bigquery_datasource"
   }
  
+ 
   return {
     'type': 'postgres',
     'host': 'demo-db-examples.cube.dev',
