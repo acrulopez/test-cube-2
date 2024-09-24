@@ -8,7 +8,7 @@ def driver_factory(ctx: dict) -> None:
   data_source = ctx['dataSource']
 
   return {
-    'type': 'bigquery'
+    'type': 'bigquery',
     'projectId': 'ornate-magnet-376615'
   }
 
