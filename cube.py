@@ -10,7 +10,6 @@ def driver_factory(ctx: dict) -> None:
   return {
     'type': 'bigquery',
     'projectId': 'ornate-magnet-376615',
-    'keyFilename': 'aa',
     'location': 'EU',
     'database': "bigquery_datasource"
   }
