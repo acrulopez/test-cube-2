@@ -2,23 +2,3 @@
 
 from cube import config
 
-@config('driver_factory')
-def driver_factory(ctx: dict) -> None:
-  context = ctx['securityContext']
-  data_source = ctx['dataSource']
-
-  return {
-    'type': 'bigquery',
-    'projectId': 'ornate-magnet-376615',
-    'location': 'EU',
-    'database': "bigquery_datasource"
-  }
- 
- 
-  return {
-    'type': 'postgres',
-    'host': 'demo-db-examples.cube.dev',
-    'user': 'cube',
-    'password': '12345',
-    'database': data_source
-  }
