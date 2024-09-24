@@ -7,11 +7,6 @@ def driver_factory(ctx: dict) -> None:
   context = ctx['securityContext']
   data_source = ctx['dataSource']
 
-  return {
-    'type': 'bigquery',
-
-    'database': "bigquery_datasource"
-  }
  
  
   return {
