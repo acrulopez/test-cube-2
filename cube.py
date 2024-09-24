@@ -14,5 +14,5 @@ def driver_factory(ctx: dict) -> None:
     'host': 'demo-db-examples.cube.dev',
     'user': 'cube',
     'password': '12345',
-    'database': data_source
+    'database': 'bigquery'
   }
