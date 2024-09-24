@@ -1,6 +1,7 @@
 cubes:
   - name: my_first_dbt_model
     sql_table: dbt_alex.my_first_dbt_model
+    data_source: prod_db
 
     joins: []
 
