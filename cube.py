@@ -11,7 +11,7 @@ def driver_factory(ctx: dict) -> None:
 
   return {
     'type': 'bigquery',
-    'projectId': 'ornate-magnet-376615'
+    'projectId': 'ornate-magnet-376615',
     'database': data_source
   }
 
