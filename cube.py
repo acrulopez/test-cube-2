@@ -10,7 +10,6 @@ def driver_factory(ctx: dict) -> None:
   return {
     'type': 'bigquery',
 
-    'location': 'EU',
     'database': "bigquery_datasource"
   }
  
