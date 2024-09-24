@@ -7,6 +7,8 @@ def driver_factory(ctx: dict) -> None:
   context = ctx['securityContext']
   data_source = ctx['dataSource']
 
+  print(ctx)
+
   return {
     'type': 'bigquery',
     'projectId': 'ornate-magnet-376615'
