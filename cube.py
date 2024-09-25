@@ -2,6 +2,14 @@
 
 from cube import config
 
+@config('context_to_app_id')
+def context_to_app_id(ctx: dict) -> str:
+  return f"CUBE_APP_{ctx['securityContext']['tenant_id']}"
+ 
+@config('context_to_orchestrator_id')
+def context_to_orchestrator_id(ctx: dict) -> str:
+  return f"CUBE_APP_{ctx['securityContext']['tenant_id']}"
+
 @config('driver_factory')
 def driver_factory(ctx: dict) -> None:
   context = ctx['securityContext']
@@ -9,7 +17,7 @@ def driver_factory(ctx: dict) -> None:
 
   print(ctx)
 
-  if ctx['securityContext'].get('merchant_id') == '1':
+  if ctx['securityContext'].get('tenant_id') == '1':
     return {
       'type': 'bigquery',
       'projectId': 'ornate-magnet-376615',
