@@ -4,11 +4,11 @@ from cube import config
 
 @config('context_to_app_id')
 def context_to_app_id(ctx: dict) -> str:
-  return f"CUBE_APP_{ctx['securityContext']['tenant_id']}"
+  return f"CUBE_APP_{ctx['securityContext'].get('tenant_id','null')}"
  
 @config('context_to_orchestrator_id')
 def context_to_orchestrator_id(ctx: dict) -> str:
-  return f"CUBE_APP_{ctx['securityContext']['tenant_id']}"
+  return f"CUBE_APP_{ctx['securityContext'].get('tenant_id','null')}"
 
 @config('driver_factory')
 def driver_factory(ctx: dict) -> None:
