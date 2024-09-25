@@ -11,6 +11,7 @@ def driver_factory(ctx: dict) -> None:
 
   if 'merchand_id' not in ctx['securityContext']:
     raise Exception(str(ctx))
+    
 
   return {
     'type': 'bigquery',
