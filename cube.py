@@ -27,7 +27,6 @@ def driver_factory(ctx: dict) -> None:
       'database': data_source
     }
   else:
-    
     return {
       'type': 'bigquery',
       'projectId': 'learn-terraform-378516',
