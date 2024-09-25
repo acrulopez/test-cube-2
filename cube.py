@@ -19,6 +19,7 @@ def driver_factory(ctx: dict) -> None:
     return {
       'type': 'bigquery',
       'projectId': 'learn-terraform-378516',
+      'location': 'EU',
       'database': data_source
     }
 
