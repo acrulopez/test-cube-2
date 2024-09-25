@@ -9,7 +9,7 @@ def driver_factory(ctx: dict) -> None:
 
   print(ctx)
 
-  if ctx['securityContext'].get('merchant_id') == 1:
+  if ctx['securityContext'].get('merchant_id') == '1':
     return {
       'type': 'bigquery',
       'projectId': 'ornate-magnet-376615',
