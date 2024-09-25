@@ -17,7 +17,6 @@ def driver_factory(ctx: dict) -> None:
 
   print(ctx)
 
-
   if ctx['securityContext'].get('tenant_id','null') == '1':
     return {
       'type': 'bigquery',
