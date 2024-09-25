@@ -31,13 +31,3 @@ def driver_factory(ctx: dict) -> None:
       'location': 'EU',
       'database': data_source
     }
-
- 
- 
-  return {
-    'type': 'postgres',
-    'host': 'demo-db-examples.cube.dev',
-    'user': 'cube',
-    'password': '12345',
-    'database': 'bigquery'
-  }
