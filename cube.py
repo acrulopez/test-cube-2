@@ -15,7 +15,6 @@ def driver_factory(ctx: dict) -> None:
   context = ctx['securityContext']
   data_source = ctx['dataSource']
 
-
   print(ctx)
 
   if ctx['securityContext']['tenant_id'] == '1':
