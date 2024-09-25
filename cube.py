@@ -9,6 +9,9 @@ def driver_factory(ctx: dict) -> None:
 
   print(ctx)
 
+  if 'merchand_id' not in ctx['securityContext']:
+    raise Exception("aaa")
+
   return {
     'type': 'bigquery',
     'projectId': 'ornate-magnet-376615',
