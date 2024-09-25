@@ -9,15 +9,18 @@ def driver_factory(ctx: dict) -> None:
 
   print(ctx)
 
-  if 'merchand_id' not in ctx['securityContext']:
-    raise Exception(str(ctx))
-    
-
-  return {
-    'type': 'bigquery',
-    'projectId': 'ornate-magnet-376615',
-    'database': data_source
-  }
+  if ctx['securityContext'].get('merchant_id') == 1:
+    return {
+      'type': 'bigquery',
+      'projectId': 'ornate-magnet-376615',
+      'database': data_source
+    }
+  else:
+    return {
+      'type': 'bigquery',
+      'projectId': 'learn-terraform-378516',
+      'database': data_source
+    }
 
  
  
